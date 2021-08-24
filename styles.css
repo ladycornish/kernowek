@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Calibri', sans-serif;
+}
+
+html {
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+}
+
+/* img {
+    max-width: 100%;
+}
+*/
+
+:root {
+    --darker-blue-col: #011A43;
+    --mid-blue-col: #5B80B4;
+}
+
+/* Section 1 */
+
+.section-1 {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.section-1-header {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    border-bottom: 0.2rem solid var(--darker-blue-col);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3em;
+}
+
+.logo {
+    display:flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 12rem;
+    height: auto;
+    border: .2rem solid #5B80B4;
+}
+
+.section-1-heading {
+    font-family: 'Roboto Mono';
+    font-size: 4vmin;
+    text-align: center;
+    color: var(--darker-blue-col);
+    padding: 0 .5em;
+}
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    display:none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+.hamburger:focus {
+    outline: none;
+}
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin: auto;
+}
+
+.nav-link {
+    font-size: 2.2rem;
+    text-decoration: none;
+    color:  var(--darker-blue-col);
+    opacity: 0.7;
+    padding: 0 .4em;
+}
+
+.section-1-main {
+    height: auto;
+    width: 90%;
+    position: relative;
+    margin: 15vh auto 0 auto;
+}
+
+.section-1-h2 {
+    width: 100%;
+    height: 100%;
+    font-size: 50vw;
+    text-align: center;
+    background-image: url('images/geolocation.jpeg');
+    background-size: cover;
+    background-origin:border-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+ 
+/* End of Section 1 */
+
+/* section 2 */
+
+  .section-2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-2-heading {
+    margin-top: 15vh;
+    font-size: 10vw;
+    color: var(--darker-blue-col);
+    text-align: center;
+    font-family: 'Calibri';
+    background-image: url('images/geolocation.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.section-2-info {
+    width: 80%;
+    margin: 0 auto;
+}
+.section-2-h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 3vmin;
+    text-align: center;
+}
+.section-2-text{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.card-container {
+    width: 90%;
+    display: flex;
+    margin: 1em auto;
+}
+
+.services-card {
+    width: 33%;
+    padding: 2em 3em 0 3em;
+    border-radius: .2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    overflow: scroll;
+}
+
+.card-icon {
+    font-size: 4rem;
+    color: var(--darker-blue-col);
+    opacity: 0.8;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+}
+
+.card-heading {
+    font-size: 2.5rem;
+    color: var(--darker-blue-col);
+    opacity: 0.7;
+    text-align: center;
+    padding: .5em 0;
+    margin-bottom: .5em;
+}
+
+.card-text {
+    font-size: 1.8rem;
+    padding: 1em 1.5em;
+}
+
+.card-para {
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.wide-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em 3em;
+    border-radius: .2rem;
+    border: 2px solid var(--darker-blue-col);
+}
+
+.att-heading {
+    font-size: 2.8rem;
+    color: (var(--darker-blue-col));
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.att-text {
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* End of Section 2 */
+
+/* Section 3 */
+.section-3 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20rem;
+}
+
+.section-3-main {
+    margin-top: 15vh;
+    width: 80vw;
+    display: flex;
+    margin: auto;
+    align-items: center;
+  justify-content: center;
+}
+
+.section-3-h4 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.img-left {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-right {
+    width: 60%;
+    height: auto;
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: .3rem .3rem 1.5rem lightgrey;
+    text-align: left;
+}
+
+.section-3-img {
+    width: 25rem;
+    height: auto;
+    border-radius: 30%;
+    padding: 2rem 0;
+    filter: drop-shadow(.3rem .3rem 1.5rem lightgrey);
+}
+
+.section-3-text {
+    font-size: 2rem;
+}
+
+/* End of Section 3 */
+
+/* Section 4 */
+.section-4 {
+    width: 100%;
+    height: auto;
+}
+
+.contact-main {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5em;
+}
+
+.section-4-heading {
+    font-size: 10vw;
+    color: var(--darker-blue-col);
+    text-align: center;
+    font-family: 'Calibri';
+    background-image: url('images/geolocation.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-4-text {
+    font-size: 2.5rem;
+    margin: 2em 0;
+    text-align: center;
+}
+
+.contact-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 2em;
+}
+
+.contact-icon {
+    font-size: 4rem;
+    margin-right: 1rem;
+}
+
+.contact-text {
+    font-size: 2.5rem;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--darker-blue-col);
+}
+.link:hover {
+    text-decoration: none;
+    color: var(--mid-blue-col);
+}
+
+.bottom-line {
+    width: 100%;
+    height: 1rem;
+    border-bottom: .5px solid grey;
+}
+
+.copy {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    background-color: var(--darker-blue-col);
+}
+
+.copy-text {
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+
+    letter-spacing: .1rem;
+}
+.arrow {
+    display: flex;
+    justify-content: center;
+    padding: .125rem;
+}
+.arrow-up {
+    font-size: 5rem;
+    color:  var(--mid-blue-col);
+}
+/* End of Section 4 */
+
+/* Media */
+
+@media (max-width: 600px) {
+   
+    .section-2-heading, 
+    .section-4 {
+        margin-top: 1em;
+    }
+    .card-container,
+    .section-3-main {
+        display: block;
+    }
+    .services-card, 
+    .img-left {
+        width: 100%;
+    }
+    .text-right {
+        width: 100%;
+        margin: 2em auto;
+    }
+    .section-3 {
+        padding-bottom: 0;
+    }
+    
+}
+
+@media (max-width: 900px) {
+    .nav-list {
+        flex-wrap: wrap;
+    }
+    .section-3-main {
+        flex-direction: column;
+    }
+    .text-right {
+        width: 100%;
+    }
+}
+
