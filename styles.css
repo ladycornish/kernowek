@@ -60,7 +60,7 @@ body {
 
 .section-1-heading {
     font-family: 'Roboto Mono';
-    font-size: 4vmin;
+    font-size: 3.8vmin;
     text-align: center;
     color: var(--darker-blue-col);
     padding: 0 .5em;
@@ -77,6 +77,7 @@ body {
     outline: none;
 }
 .nav-bar {
+    width: 40%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -86,6 +87,7 @@ body {
     list-style-type: none;
     justify-content: flex-end;
     margin: auto;
+    padding-right: 3rem;
 }
 
 .nav-link {
@@ -93,9 +95,67 @@ body {
     text-decoration: none;
     color:  var(--darker-blue-col);
     opacity: 0.7;
-    padding: 0 .4em;
+    padding: 0 1.5rem;
 }
 
+.nav-link:hover {
+    color: var(--mid-blue-col);
+}
+
+
+/* New KC Section */
+
+   .masked {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .mask-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/geolocation.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+   section > svg {
+       max-width: 1200px;
+       margin: 0 auto;
+   }
+
+svg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+}
+
+svg text {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 6vmin;
+}
+
+/* does all */
+
+svg rect {
+    fill:white; 
+}
+
+
+/* does direct descendant */
+
+
+svg > rect {
+    -webkit-mask: url('#mask');
+    mask: url('#mask');
+} 
+
+
+/*
 .section-1-main {
     height: auto;
     width: 90%;
@@ -117,8 +177,10 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-  }
- 
+  } 
+
+  */
+
 /* End of Section 1 */
 
 /* section 2 */
@@ -160,17 +222,18 @@ body {
 .card-container {
     width: 90%;
     display: flex;
-    margin: 1em auto;
+    margin: 0 auto;
 }
 
 .services-card {
     width: 33%;
-    padding: 2em 3em 0 3em;
+    margin: 2rem;
+    padding: 2rem 2rem;
     border-radius: .2rem;
+    box-shadow: .5rem .5rem .6rem lightgray, -.5rem -.5rem .6rem lightgray;
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    overflow: scroll;
 }
 
 .card-icon {
@@ -183,7 +246,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 30%;
+    height: 40%;
 }
 
 .card-heading {
@@ -197,7 +260,7 @@ body {
 
 .card-text {
     font-size: 1.8rem;
-    padding: 1em 1.5em;
+    padding: 0 1.5em;
 }
 
 .card-para {
@@ -211,7 +274,7 @@ body {
     margin: 0 auto;
     padding: 2em 3em;
     border-radius: .2rem;
-    border: 2px solid var(--darker-blue-col);
+    box-shadow: .5rem .5rem .6rem lightgray, -.5rem -.5rem .6rem lightgray;
 }
 
 .att-heading {
@@ -373,9 +436,147 @@ body {
 
 /* Media */
 
+@media(max-width: 1440px) {
+    .nav-link {
+        font-size: 2.5rem;
+    }
+    .logo-img {
+        width: 10rem;
+    }
+    .card-text {
+        font-size: 1.8rem;
+    }
+    .section-3 {
+        padding-top: 2rem;
+    }
+}
+
+@media(max-width: 1260px) {
+
+    .nav-link {
+        font-size: 2rem;
+    }
+
+    .card-icon {
+        font-size: 3rem;
+    }
+    .card-heading {
+        font-size: 3rem;;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .nav-bar {
+        width: 20vw;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        font-size: 1.8rem;
+    }
+    .card-container {
+        padding: 0;
+    }
+    .card-heading {
+        font-size: 2rem;
+    }
+    .card-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .section-3-main {
+        flex-direction: column;
+    }
+    .services-card {
+        height: auto;
+    }
+    .text-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: -1rem;
+        right: 3rem;
+    }
+
+    .nav-bar {
+        position: relative;
+
+    }
+    .nav-list {
+        display: none;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .nav-list.show {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: var(--darker-blue-col);
+        line-height: 2;
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        color: #fff;
+        opacity: 1;
+    }
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .services-card {
+        width: 90%;
+        height:200px;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+    }
+    .card-heading {
+        font-size: 2rem;
+    }
+    .card-info {
+        width: 40%;
+        height: auto;
+    }
+    .card-text li {
+        margin-left: 0.9rem;
+    }
+
+    .third-service {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .section-3-h4 {
+        font-size: 3.5rem;
+    }
+
+}
+
+
 @media (max-width: 600px) {
-   
-    .section-2-heading, 
+
+    .section-2-heading,
     .section-4 {
         margin-top: 1em;
     }
@@ -383,9 +584,14 @@ body {
     .section-3-main {
         display: block;
     }
-    .services-card, 
+
+    .services-card,
     .img-left {
         width: 100%;
+        margin: 2rem 0 2rem 0;
+    }
+    .third-service {
+        margin: 0 auto;
     }
     .text-right {
         width: 100%;
@@ -394,18 +600,12 @@ body {
     .section-3 {
         padding-bottom: 0;
     }
-    
+
 }
 
-@media (max-width: 900px) {
-    .nav-list {
-        flex-wrap: wrap;
+@media(max-width: 425px) {
+    .hamburger {
+        right: 2rem;
     }
-    .section-3-main {
-        flex-direction: column;
-    }
-    .text-right {
-        width: 100%;
-    }
-}
 
+}
